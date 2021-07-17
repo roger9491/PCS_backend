@@ -13,10 +13,12 @@ namespace PCS.Controllers
     [AllowAnonymous]
     public class LoginController : ApiController
     {
+        //test
         PCSEntities db = new PCSEntities();
 
         public IHttpActionResult PostLogin(AdminModel admin)
         {
+            var data123 = 0;
             var DataItem = from data in db.Admin
                            where data.Username == admin.Username && data.Password == admin.Password
                            select data;
